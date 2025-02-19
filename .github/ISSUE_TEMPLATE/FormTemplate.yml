@@ -27,4 +27,25 @@ body:
       label: "Associated bugs"
       description: "List any bugs related to this implementation."
       placeholder: "Enter bug references or issue numbers if applicable."
+---
+
+name: "Task"
+description: "Describe the task to be completed."
+title: "[Task]: "
+labels: [task]
+body:
+  - type: textarea
+    id: what_to_do
+    attributes:
+      label: "What to do"
+      description: "Describe the task that needs to be completed."
+      placeholder: "Enter details about the task."
+    validations:
+      required: true
+  - type: textarea
+    id: what_is_done
+    attributes:
+      label: "What is done"
+      description: "Describe what has been accomplished so far."
+      placeholder: "Enter details about completed work."
 

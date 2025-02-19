@@ -1,222 +1,30 @@
-name: "Bug Report"
-description: "Report a bug in the project."
-title: "[Bug]: "
-labels: [bug]
-body:
-  - type: dropdown
-    id: status
-    attributes:
-      label: "Status"
-      options:
-        - Open
-        - In Progress
-        - Closed
-  - type: input
-    id: sub_issues_progress
-    attributes:
-      label: "Sub-issues Progress"
-      placeholder: "Describe progress on sub-issues if any"
-  - type: dropdown
-    id: priority
-    attributes:
-      label: "Priority"
-      options:
-        - Low
-        - Medium
-        - High
-  - type: dropdown
-    id: size
-    attributes:
-      label: "Size"
-      options:
-        - Small
-        - Medium
-        - Large
-  - type: input
-    id: estimate
-    attributes:
-      label: "Estimate"
-      placeholder: "Time estimation for resolution"
-  - type: input
-    id: iteration
-    attributes:
-      label: "Iteration"
-      placeholder: "Sprint or iteration number"
-  - type: input
-    id: start_date
-    attributes:
-      label: "Start Date"
-      placeholder: "Enter start date (YYYY-MM-DD)"
-
-  - type: input
-    id: end_date
-    attributes:
-      label: "End Date"
-      placeholder: "Enter end date (YYYY-MM-DD)"
-  - type: textarea
-    id: description
-    attributes:
-      label: "Bug Description"
-      description: "Provide a clear and concise description of the bug."
-      placeholder: "What happened? What did you expect to happen?"
-    validations:
-      required: true
-  - type: textarea
-    id: reproduction_steps
-    attributes:
-      label: "Steps to Reproduce"
-      description: "Provide steps to reproduce the bug."
-    validations:
-      required: true
-  - type: textarea
-    id: expected_behavior
-    attributes:
-      label: "Expected Behavior"
-      description: "What should have happened instead?"
-    validations:
-      required: true
-  - type: textarea
-    id: additional_info
-    attributes:
-      label: "Additional Information"
-      description: "Any extra information, screenshots, or logs."
-
----
-
-name: "Feature Request"
-description: "Suggest a new feature or improvement."
-title: "[Feature]: "
+name: "Implementation Task"
+description: "Describe what needs to be implemented."
+title: "[Implementation]: "
 labels: [enhancement]
 body:
-  - type: dropdown
-    id: status
-    attributes:
-      label: "Status"
-      options:
-        - Open
-        - In Progress
-        - Closed
-  - type: input
-    id: sub_issues_progress
-    attributes:
-      label: "Sub-issues Progress"
-  - type: dropdown
-    id: priority
-    attributes:
-      label: "Priority"
-      options:
-        - Low
-        - Medium
-        - High
-  - type: dropdown
-    id: size
-    attributes:
-      label: "Size"
-      options:
-        - Small
-        - Medium
-        - Large
-  - type: input
-    id: estimate
-    attributes:
-      label: "Estimate"
-  - type: input
-    id: iteration
-    attributes:
-      label: "Iteration"
-  - type: datetime
-    id: start_date
-    attributes:
-      label: "Start Date"
-  - type: datetime
-    id: end_date
-    attributes:
-      label: "End Date"
   - type: textarea
-    id: feature_description
+    id: what_will_be_implemented
     attributes:
-      label: "Feature Description"
-      placeholder: "Describe the feature and its benefits."
+      label: "What will be implemented"
+      description: "Describe the feature or functionality to be implemented."
+      placeholder: "Enter details about what needs to be done."
+    validations:
+      required: true
+  - type: dropdown
+    id: state_of_implementation
+    attributes:
+      label: "State of implementation"
+      options:
+        - Not started
+        - In progress
+        - Completed
     validations:
       required: true
   - type: textarea
-    id: use_case
+    id: associated_bugs
     attributes:
-      label: "Use Case"
-      placeholder: "Provide an example of how this feature will be used."
-    validations:
-      required: true
-
----
-
-name: "Documentation Improvement"
-description: "Suggest updates or fixes to the documentation."
-title: "[Docs]: "
-labels: [documentation]
-body:
-  - type: dropdown
-    id: status
-    attributes:
-      label: "Status"
-      options:
-        - Open
-        - In Progress
-        - Closed
-  - type: input
-    id: sub_issues_progress
-    attributes:
-      label: "Sub-issues Progress"
-  - type: textarea
-    id: doc_changes
-    attributes:
-      label: "Proposed Changes"
-      placeholder: "Describe the changes needed."
-    validations:
-      required: true
-  - type: textarea
-    id: rationale
-    attributes:
-      label: "Why is this needed?"
-      placeholder: "Explain why these changes are necessary."
-    validations:
-      required: true
-  - type: textarea
-    id: additional_info
-    attributes:
-      label: "Additional Information"
-      description: "Any extra notes or references."
-
----
-
-name: "General Question"
-description: "Ask a general question about the project."
-title: "[Question]: "
-labels: [question]
-body:
-  - type: dropdown
-    id: status
-    attributes:
-      label: "Status"
-      options:
-        - Open
-        - Answered
-  - type: textarea
-    id: question
-    attributes:
-      label: "Question"
-      placeholder: "Ask your question here."
-    validations:
-      required: true
-  - type: textarea
-    id: additional_info
-    attributes:
-      label: "Additional Information"
-      description: "Any context or references that might help answer the question."
-
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com). 
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      label: "Associated bugs"
+      description: "List any bugs related to this implementation."
+      placeholder: "Enter bug references or issue numbers if applicable."
 
